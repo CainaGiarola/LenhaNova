@@ -26,6 +26,7 @@ var percentVal;
 var fileItem;
 var fileName;
 var img = document.querySelector(".img");
+
 export function getFile(e) {
     fileItem = e.target.files[0];
     fileName = fileItem.name;
