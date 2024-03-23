@@ -1,16 +1,3 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
-    authDomain: "lenhanova.firebaseapp.com",
-    databaseURL: "https://lenhanova-default-rtdb.firebaseio.com",
-    projectId: "lenhanova",
-    storageBucket: "lenhanova.appspot.com",
-    messagingSenderId: "99692343858",
-    appId: "1:99692343858:web:271d58a1b6a19d8686022b",
-    measurementId: "G-19YG6E8RVG"
-  };
-
-firebase.initializeApp(firebaseConfig);
-  
 var fileText = document.querySelector(".fileText");
 var uploadPercentage = document.querySelector(".uploadPercentage");
 var progress = document.querySelector(".progress");
@@ -18,7 +5,7 @@ var percentVal;
 var fileItem;
 var fileName;
 var img = document.querySelector(".img");
- function  getFile(e) {
+ function getFile(e) {
     fileItem = e.target.files[0];
     fileName = fileItem.name;
     fileText.innerHTML = fileName;
