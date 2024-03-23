@@ -1,4 +1,4 @@
-const firebaseConfig = {
+var firebaseConfig = {
     apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
     authDomain: "lenhanova.firebaseapp.com",
     databaseURL: "https://lenhanova-default-rtdb.firebaseio.com",
@@ -10,7 +10,7 @@ const firebaseConfig = {
   };
 
   // Initialize Firebase
-  const firebase = initializeApp(firebaseConfig);
+var firebase = initializeApp(firebaseConfig);
 
 var fileText = document.querySelector(".fileText");
 var uploadPercentage = document.querySelector(".uploadPercentage");
