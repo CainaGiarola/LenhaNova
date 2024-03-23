@@ -32,8 +32,6 @@ export function getFile(e) {
     fileText.innerHTML = fileName;
 }
 
-document.getElementById('fileImp').addEventListener('change', getFile);
-
 export function uploadImage() {
     const storage = getStorage(firebase);
     let storageRef = ref(storage, "images/" + fileName);
