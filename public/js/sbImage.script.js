@@ -1,16 +1,20 @@
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
-//     authDomain: "lenhanova.firebaseapp.com",
-//     databaseURL: "https://lenhanova-default-rtdb.firebaseio.com",
-//     projectId: "lenhanova",
-//     storageBucket: "lenhanova.appspot.com",
-//     messagingSenderId: "99692343858",
-//     appId: "1:99692343858:web:271d58a1b6a19d8686022b",
-//     measurementId: "G-19YG6E8RVG"
-//   };
 
-//   // Initialize Firebase
-// var firebase = initializeApp(firebaseConfig);
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
+  authDomain: "lenhanova.firebaseapp.com",
+  databaseURL: "https://lenhanova-default-rtdb.firebaseio.com",
+  projectId: "lenhanova",
+  storageBucket: "lenhanova.appspot.com",
+  messagingSenderId: "99692343858",
+  appId: "1:99692343858:web:271d58a1b6a19d8686022b",
+  measurementId: "G-19YG6E8RVG"
+};
+
+// Initialize Firebase
+const firebase = initializeApp(firebaseConfig);
+console.log(firebase)
 
 var fileText = document.querySelector(".fileText");
 var uploadPercentage = document.querySelector(".uploadPercentage");
@@ -26,7 +30,7 @@ function getFile(e) {
 }
 
 function uploadImage() {
-    let storageRef = storage().ref("images/" + filename);
+    let storageRef = firebase.storage().ref("images/" + filename);
     let uploadTask = storageRef.put(fileName);
 
     uploadTask.on("state_changed", (snapshot) => {
