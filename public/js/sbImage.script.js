@@ -7,9 +7,10 @@ const firebaseConfig = {
     messagingSenderId: "99692343858",
     appId: "1:99692343858:web:271d58a1b6a19d8686022b",
     measurementId: "G-19YG6E8RVG"
-};
+  };
 
-firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase
+  const firebase = initializeApp(firebaseConfig);
 
 var fileText = document.querySelector(".fileText");
 var uploadPercentage = document.querySelector(".uploadPercentage");
