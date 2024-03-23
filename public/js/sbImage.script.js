@@ -4,7 +4,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-storage.js";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
   authDomain: "lenhanova.firebaseapp.com",
@@ -27,7 +26,7 @@ var percentVal;
 var fileItem;
 var fileName;
 var img = document.querySelector(".img");
-function getFile(e) {
+export function getFile(e) {
     fileItem = e.target.files[0];
     fileName = fileItem.name;
     fileText.innerHTML = fileName;
@@ -35,7 +34,7 @@ function getFile(e) {
 
 document.getElementById('fileImp').addEventListener('change', getFile);
 
-function uploadImage() {
+export function uploadImage() {
     const storage = getStorage(firebase);
     let storageRef = ref(storage, "images/" + fileName);
     let uploadTask = uploadBytesResumable(storageRef, fileItem);

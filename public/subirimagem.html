@@ -24,7 +24,13 @@
     <div class="imageUploaded">
         <img alt="" class="img">
     </div>
-    <script type="module" src="./js/sbImage.script.js"></script>
+    <script type="module">
+        import { getFile, uploadImage } from "./js/sbImage.script.js";
+    
+        document.getElementById('fileImp').addEventListener('change', getFile);
+    </script>
+    
+    <!-- <script type="module" src="./js/sbImage.script.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-storage.js"></script> -->
 </body>
