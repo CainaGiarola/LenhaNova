@@ -26,13 +26,13 @@ var fileItem;
 var fileName;
 var img = document.querySelector(".img");
 
-export function getFile(e) {
+function getFile(e) {
     fileItem = e.target.files[0];
     fileName = fileItem.name;
     fileText.innerHTML = fileName;
 }
 
-export function uploadImage() {
+function uploadImage() {
     const storage = getStorage(firebase);
     let storageRef = ref(storage, "images/" + fileName);
     let uploadTask = uploadBytesResumable(storageRef, fileItem);
@@ -58,6 +58,8 @@ export function uploadImage() {
         });
     });
 }
+
+export {getFile, uploadImage}
 
 // function uploadImage() {
 //     let storageRef = firebase.storage().ref("images/" + filename);
