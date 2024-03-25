@@ -1,8 +1,8 @@
 // import { initializeApp } from "firebase/app";
 // import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-storage.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+// import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-storage.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAYpQUk1SDs4dxdsW_HIwybiM0thFdwpaM",
